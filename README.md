@@ -1,8 +1,8 @@
-# Invoice Management App with FastAPI and SeerBit API Integration
+# Invoice Management App with FastAPI and The SeerBit Invoice API Integration
 
 **Welcome to the Invoice Management App!**
 
-This project showcases a streamlined approach to creating, managing, and sending invoices through FastAPI and SeerBit API, with MongoDB as a backend database.
+This project showcases a streamlined approach to creating, managing, and sending invoices through FastAPI and The SeerBit Invoice API, with MongoDB as a backend database.
 With its core in simplicity and scalability, this app is designed for developers interested in building financial solutions that require secure, efficient payment and invoicing functionalities.
 
 ## Features
@@ -29,7 +29,9 @@ With its core in simplicity and scalability, this app is designed for developers
 
 • MongoDB instance (local or hosted)
 
-• SeerBit API credentials (API URL, Public Key, Encrypted Key)
+• SeerBit Invoice API credentials (API URL, Public Key, Encrypted Key)
+
+• Create a SeerBit account: To get your API credentials (Public Key), create an account at [SeerBit](https://seerbit.com/) and follow the instructions to access your API details.
 
 • `.env` file with the following keys:
 
@@ -46,7 +48,7 @@ PUBLIC_KEY="your_public_key"
 1. **FastAPI**: FastAPI is a modern, fast (high-performance) web framework for building APIs with Python. It is ideal for building applications that require high-performance requests. In this app, FastAPI is used to create RESTful endpoints that manage invoices.
 2. **Pydantic**: Used for data validation and serialization. Pydantic is used here to define the Invoice model that validates incoming data for invoice creation.
 
-3. **Requests**: A simple and elegant HTTP library used to make requests to the SeerBit API for creating and sending invoices. We use it to send POST and GET requests to the SeerBit API for invoice management.
+3. **Requests**: A simple and elegant HTTP library used to make requests to the SeerBit Invoice API for creating and sending invoices. We use it to send POST and GET requests to the SeerBit Invoice API for invoice management.
 
 4. **PyMongo**: This is the official Python driver for MongoDB. It’s used to interact with a MongoDB database for storing and retrieving invoice data in this app.
 
@@ -96,15 +98,15 @@ PUBLIC_KEY="your_public_key"
 
 ## How It Works
 
-1. **Invoice Creation:** Invoice data is validated and sent to the SeerBit API. If successful, the invoice is stored in MongoDB.
+1. **Invoice Creation:** Invoice data is validated and sent to the SeerBit Invoice API. If successful, the invoice is stored in MongoDB.
 
 2. **Invoice Retrieval:** Invoices can be fetched using their unique IDs stored in MongoDB.
 
-3. **Send Invoice:** Sends the created invoice to clients via SeerBit’s send API, notifying them of pending payments.
+3. **Send Invoice:** Sends the created invoice to clients via SeerBit’s send Invoice API, notifying them of pending payments.
 
 ## Notes
 
-• Ensure your [SeerBit API](https://seerbit.github.io/openapi/#tag/AUTHENTICATION) credentials are correctly set in your `.env` file for smooth integration.
+• Ensure your [SeerBit Invoice API](https://doc.seerbit.com) credentials are correctly set in your `.env` file for smooth integration.
 
 • MongoDB URI should allow external connections if using a cloud-based database.
 
